@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - pedefsza@localhost" uuid="b4fe66b2-5540-4a05-821a-f2e273831b3d">
+      <secret-storage>master_key</secret-storage>
+      <user-name>fey</user-name>
+      <schema-pattern>pedefsza.pg_catalog pedefsza.public</schema-pattern>
+      <default-schemas>pedefsza.pg_catalog pedefsza.public</default-schemas>
+    </data-source>
+  </component>
+</project>
