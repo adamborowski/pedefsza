@@ -1,0 +1,3 @@
+report_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: ReportBundle:Default:index }
