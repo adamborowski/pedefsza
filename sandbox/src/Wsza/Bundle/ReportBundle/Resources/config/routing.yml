@@ -1,3 +1,7 @@
 report_homepage:
     path:     /hello/{name}
     defaults: { _controller: ReportBundle:Default:index }
+pedefsza_api:
+    prefix: api/wsza
+    resource: api.yml
+    options: {expose: true}

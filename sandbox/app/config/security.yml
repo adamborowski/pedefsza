@@ -22,6 +22,9 @@ security:
     providers:
         fos_userbundle:
             id: fos_user.user_manager
+            #TODO
+#        wsza_reportbundle:
+#            id: wsza_report.client_manager
 
         in_memory:
             memory:

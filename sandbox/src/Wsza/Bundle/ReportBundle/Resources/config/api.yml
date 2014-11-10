@@ -1,0 +1,16 @@
+pedefsza_api_client:
+    resource: Wsza\Bundle\ReportBundle\Controller\ClientController
+    type: rest
+pedefsza_api_tariff:
+    resource: Wsza\Bundle\ReportBundle\Controller\TariffController
+    type: rest
+pedefsza_api_subscriber:
+    resource: Wsza\Bundle\ReportBundle\Controller\SubscriberController
+    type: rest
+pedefsza_api_connection:
+    resource: Wsza\Bundle\ReportBundle\Controller\ConnectionController
+    type: rest
+pedefsza_api_report:
+    resource: Wsza\Bundle\ReportBundle\Controller\ReportController
+    type: rest
+

@@ -1,6 +1,6 @@
 <?php
-namespace Sonata\Bundle\DemoBundle\Entity;
-
+namespace Wsza\Bundle\ReportBundle\Entity;
+use  JMS\Serializer\Annotation\Exclude;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -22,6 +22,20 @@ class Client
      * np Orange Polska SA
      */
     protected $name;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     * np orange
+     */
+    protected $login;
+    /**
+     * @ORM\Column(type="string", length=100)
+     * @Exclude
+     * SHA-256 hash
+     */
+    protected $password;
+
+
     /**
      * @ORM\Column(type="string", length=100)
      */
@@ -74,11 +88,13 @@ class Client
     /**
      * @ORM\OneToMany(targetEntity="Subscriber", cascade={"persist", "remove"}, mappedBy="client")
      * @Assert\Valid
+     * @Exclude
      */
     protected $subscribers;
     /**
      * @ORM\OneToMany(targetEntity="Tariff", cascade={"persist", "remove"}, mappedBy="client")
      * @Assert\Valid
+     * @Exclude
      */
     protected $tariffs;
 

@@ -1,7 +1,8 @@
 <?php
-namespace Sonata\Bundle\DemoBundle\Entity;
+namespace Wsza\Bundle\ReportBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use JMS\Serializer\Annotation\Exclude;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -30,10 +31,12 @@ class Connection
     protected $endTime;
     /**
      * @ORM\ManyToOne(targetEntity="Subscriber", inversedBy="connections")
+     * @Exclude
      */
     protected $subscriber;
     /**
      * @ORM\ManyToOne(targetEntity="Tariff", inversedBy="connections")
+     * @Exclude
      */
     protected $tariff;
 

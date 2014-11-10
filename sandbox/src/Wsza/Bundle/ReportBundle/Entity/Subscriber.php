@@ -1,6 +1,7 @@
 <?php
-namespace Sonata\Bundle\DemoBundle\Entity;
+namespace Wsza\Bundle\ReportBundle\Entity;
 
+use JMS\Serializer\Annotation as JMS;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -15,7 +16,10 @@ class Subscriber
      * @ORM\Column(type="integer")
      */
     protected $id;
-
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    protected $number;
     /**
      * @ORM\Column(type="string", length=100)
      */
@@ -32,25 +36,26 @@ class Subscriber
      * @ORM\Column(type="string", length=100)
      */
     protected $address2;
-
     /**
      * @ORM\Column(type="integer")
      * np liczba 23 oznacza że okres rozpoczyna się 23 dnia każdego miesiąca
      */
     protected $accountingPeriodStart;
-
     /**
      * @ORM\OneToMany(targetEntity="Report", cascade={"persist", "remove"}, mappedBy="subscriber")
      * @Assert\Valid
+     * @JMS\Exclude
      */
     protected $reports;
     /**
      * @ORM\OneToMany(targetEntity="Connection", cascade={"persist", "remove"}, mappedBy="subscriber")
      * @Assert\Valid
+     * @JMS\Exclude
      */
     protected $connections;
     /**
      * @ORM\ManyToOne(targetEntity="Client", inversedBy="subscribers")
+     * @JMS\Type("my_handler")
      * @Assert\Valid
      */
     protected $client;
@@ -59,6 +64,22 @@ class Subscriber
     {
         $this->reports = new ArrayCollection();
         $this->connections = new ArrayCollection();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNumber()
+    {
+        return $this->number;
+    }
+
+    /**
+     * @param mixed $number
+     */
+    public function setNumber($number)
+    {
+        $this->number = $number;
     }
 
     /**

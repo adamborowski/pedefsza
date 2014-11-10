@@ -1,6 +1,7 @@
 <?php
-namespace Sonata\Bundle\DemoBundle\Entity;
+namespace Wsza\Bundle\ReportBundle\Entity;
 
+use JMS\Serializer\Annotation\Exclude;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -32,10 +33,12 @@ class Tariff
     protected $price;
     /**
      * @ORM\ManyToOne(targetEntity="Client", inversedBy="tariffs")
+     * @Exclude
      */
     protected $client;
     /**
      * @ORM\OneToMany(targetEntity="Connection", mappedBy="tariff")
+     * @Exclude
      */
     protected $connections;
 

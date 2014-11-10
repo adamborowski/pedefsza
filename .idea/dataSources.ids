@@ -42,10 +42,9 @@
     <table name="Report" schema="" catalog="pedefsza" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="subscriber_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <column name="number" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
       <column name="requestTime" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
-      <column name="completeTime" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
-      <column name="reportTime" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="completeTime" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="reportTime" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
       <primary-key name="PRIMARY" columns="id"/>
       <foreign-key name="FK_C38372B27808B1AD" columns="subscriber_id" ref-table="Subscriber" ref-schema="" ref-catalog="pedefsza" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="IDX_C38372B27808B1AD" unique="false" columns="subscriber_id"/>
