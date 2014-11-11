@@ -49,6 +49,11 @@ sonata_admin:
             - { position: right, type: sonata.block.service.rss, settings: { title: Sonata Project's Feeds, url: http://sonata-project.org/blog/archive.rss, template: SonataAdminBundle:Block:block_rss_dashboard.html.twig }}
 
         groups:
+            sonata.admin.group.wsza:
+                label: WSZA
+                icon:            '<i class="fa fa-puzzle-piece"></i>'
+                items:
+                    - sonata.admin.client
             sonata.admin.group.content:
                 label:           sonata_content
                 label_catalogue: SonataDemoBundle
@@ -59,7 +64,6 @@ sonata_admin:
                     - sonata.media.admin.media
                     - sonata.media.admin.gallery
                     - sonata.comment.admin.thread
-
             sonata.admin.group.ecommerce:
                 label:           sonata_ecommerce
                 label_catalogue: SonataAdminBundle

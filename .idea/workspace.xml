@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="177e1f25-29ac-44f0-a0ec-6642c03490ee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Entity/BaseEntity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Serializer/ForeignKeyType.php" afterPath="$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Serializer/ForeignKeyType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Entity/Subscriber.php" afterPath="$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Entity/Subscriber.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pedefsza.iml" afterPath="$PROJECT_DIR$/.idea/pedefsza.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Resources/config/services.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pedefsza.iws" />
@@ -68,6 +63,24 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - pedefsza@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="pedefsza" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="Client" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -75,66 +88,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Connection.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Entity/Connection.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="8.666667" vertical-offset="324" max-vertical-offset="2466">
-              <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-              <folding>
-                <element signature="e#265#287#0#PHP" expanded="true" />
-                <element signature="e#311#416#0#PHP" expanded="true" />
-                <element signature="e#440#497#0#PHP" expanded="true" />
-                <element signature="e#525#572#0#PHP" expanded="true" />
-                <element signature="e#603#650#0#PHP" expanded="true" />
-                <element signature="e#679#836#0#PHP" expanded="true" />
-                <element signature="e#868#1021#0#PHP" expanded="true" />
-                <element signature="e#1050#1082#0#PHP" expanded="true" />
-                <element signature="e#1154#1186#0#PHP" expanded="true" />
-                <element signature="e#1266#1305#0#PHP" expanded="true" />
-                <element signature="e#1395#1427#0#PHP" expanded="true" />
-                <element signature="e#1513#1555#0#PHP" expanded="true" />
-                <element signature="e#1657#1689#0#PHP" expanded="true" />
-                <element signature="e#1771#1811#0#PHP" expanded="true" />
-                <element signature="e#1905#1937#0#PHP" expanded="true" />
-                <element signature="e#2025#2068#0#PHP" expanded="true" />
-                <element signature="e#2174#2206#0#PHP" expanded="true" />
-                <element signature="e#2286#2325#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Report.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Entity/Report.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.6666665" vertical-offset="162" max-vertical-offset="2088">
-              <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-              <folding>
-                <element signature="e#225#247#0#PHP" expanded="true" />
-                <element signature="e#267#372#0#PHP" expanded="true" />
-                <element signature="e#396#484#0#PHP" expanded="true" />
-                <element signature="e#517#609#0#PHP" expanded="true" />
-                <element signature="e#643#705#0#PHP" expanded="true" />
-                <element signature="e#737#890#0#PHP" expanded="true" />
-                <element signature="e#923#955#0#PHP" expanded="true" />
-                <element signature="e#1045#1089#0#PHP" expanded="true" />
-                <element signature="e#1199#1231#0#PHP" expanded="true" />
-                <element signature="e#1323#1368#0#PHP" expanded="true" />
-                <element signature="e#1482#1514#0#PHP" expanded="true" />
-                <element signature="e#1602#1645#0#PHP" expanded="true" />
-                <element signature="e#1751#1783#0#PHP" expanded="true" />
-                <element signature="e#1871#1914#0#PHP" expanded="true" />
-                <element signature="e#2020#2052#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Subscriber.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Entity/Subscriber.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.333333" vertical-offset="486" max-vertical-offset="3312">
-              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state vertical-scroll-proportion="-18.407408" vertical-offset="709" max-vertical-offset="3852">
+              <caret line="74" column="9" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
               <folding>
                 <element signature="e#50#87#0#PHP" expanded="true" />
                 <element signature="e#357#414#0#PHP" expanded="true" />
@@ -144,100 +102,46 @@
                 <element signature="e#791#914#0#PHP" expanded="true" />
                 <element signature="e#957#1108#0#PHP" expanded="true" />
                 <element signature="e#1137#1292#0#PHP" expanded="true" />
-                <element signature="e#1675#1707#0#PHP" expanded="true" />
-                <element signature="e#1787#1826#0#PHP" expanded="true" />
+                <element signature="e#1325#1499#0#PHP" expanded="true" />
+                <element signature="e#1527#1584#0#PHP" expanded="true" />
+                <element signature="e#1993#2059#0#PHP" expanded="true" />
+                <element signature="e#2139#2178#0#PHP" expanded="true" />
+                <element signature="e#2268#2300#0#PHP" expanded="true" />
+                <element signature="e#2402#2452#0#PHP" expanded="true" />
+                <element signature="e#2586#2618#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tariff.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Entity/Tariff.php">
+      <file leaf-file-name="ClientAdmin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Admin/ClientAdmin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9795571" vertical-offset="145" max-vertical-offset="2592">
-              <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+            <state vertical-scroll-proportion="-8.0" vertical-offset="216" max-vertical-offset="1404">
+              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
               <folding>
-                <element signature="e#50#87#0#PHP" expanded="true" />
-                <element signature="e#226#248#0#PHP" expanded="true" />
-                <element signature="e#268#373#0#PHP" expanded="true" />
-                <element signature="e#397#454#0#PHP" expanded="true" />
-                <element signature="e#480#613#0#PHP" expanded="true" />
-                <element signature="e#649#780#0#PHP" expanded="true" />
-                <element signature="e#807#956#0#PHP" expanded="true" />
-                <element signature="e#1209#1241#0#PHP" expanded="true" />
-                <element signature="e#1317#1354#0#PHP" expanded="true" />
-                <element signature="e#1436#1468#0#PHP" expanded="true" />
-                <element signature="e#1540#1572#0#PHP" expanded="true" />
-                <element signature="e#1668#1715#0#PHP" expanded="true" />
-                <element signature="e#1837#1869#0#PHP" expanded="true" />
-                <element signature="e#1947#1985#0#PHP" expanded="true" />
-                <element signature="e#2071#2103#0#PHP" expanded="true" />
-                <element signature="e#2183#2222#0#PHP" expanded="true" />
-                <element signature="e#2312#2344#0#PHP" expanded="true" />
-                <element signature="e#2434#2478#0#PHP" expanded="true" />
+                <element signature="e#50#85#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Client.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Entity/Client.php">
+      <file leaf-file-name="sonata_admin.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sandbox/app/config/sonata/sonata_admin.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="47.333332" vertical-offset="1404" max-vertical-offset="6480">
-              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-              <folding>
-                <element signature="e#49#88#0#PHP" expanded="true" />
-                <element signature="e#227#249#0#PHP" expanded="true" />
-                <element signature="e#269#374#0#PHP" expanded="true" />
-                <element signature="e#399#483#0#PHP" expanded="true" />
-                <element signature="e#510#584#0#PHP" expanded="true" />
-                <element signature="e#611#704#0#PHP" expanded="true" />
-                <element signature="e#736#793#0#PHP" expanded="true" />
-                <element signature="e#823#880#0#PHP" expanded="true" />
-                <element signature="e#910#967#0#PHP" expanded="true" />
-                <element signature="e#1007#1064#0#PHP" expanded="true" />
-                <element signature="e#1108#1165#0#PHP" expanded="true" />
-                <element signature="e#1209#1266#0#PHP" expanded="true" />
-                <element signature="e#1313#1370#0#PHP" expanded="true" />
-                <element signature="e#1395#1452#0#PHP" expanded="true" />
-                <element signature="e#1491#1609#0#PHP" expanded="true" />
-                <element signature="e#1643#1701#0#PHP" expanded="true" />
-                <element signature="e#1736#1794#0#PHP" expanded="true" />
-                <element signature="e#1826#1884#0#PHP" expanded="true" />
-                <element signature="e#1919#2066#0#PHP" expanded="true" />
-                <element signature="e#2099#2242#0#PHP" expanded="true" />
-                <element signature="e#2419#2451#0#PHP" expanded="true" />
-                <element signature="e#2569#2627#0#PHP" expanded="true" />
-                <element signature="e#2793#2825#0#PHP" expanded="true" />
-                <element signature="e#2907#2947#0#PHP" expanded="true" />
-                <element signature="e#3041#3073#0#PHP" expanded="true" />
-                <element signature="e#3157#3198#0#PHP" expanded="true" />
-                <element signature="e#3296#3328#0#PHP" expanded="true" />
-                <element signature="e#3412#3453#0#PHP" expanded="true" />
-                <element signature="e#3551#3583#0#PHP" expanded="true" />
-                <element signature="e#3687#3738#0#PHP" expanded="true" />
-                <element signature="e#3876#3908#0#PHP" expanded="true" />
-                <element signature="e#4020#4075#0#PHP" expanded="true" />
-                <element signature="e#4229#4261#0#PHP" expanded="true" />
-                <element signature="e#4373#4428#0#PHP" expanded="true" />
-                <element signature="e#4582#4614#0#PHP" expanded="true" />
-                <element signature="e#4688#4724#0#PHP" expanded="true" />
-                <element signature="e#4802#4834#0#PHP" expanded="true" />
-                <element signature="e#4936#4986#0#PHP" expanded="true" />
-                <element signature="e#5120#5152#0#PHP" expanded="true" />
-                <element signature="e#5244#5289#0#PHP" expanded="true" />
-                <element signature="e#5403#5435#0#PHP" expanded="true" />
-                <element signature="e#5511#5548#0#PHP" expanded="true" />
-                <element signature="e#5630#5662#0#PHP" expanded="true" />
-                <element signature="e#5756#5802#0#PHP" expanded="true" />
-                <element signature="e#5920#5952#0#PHP" expanded="true" />
-                <element signature="e#6040#6083#0#PHP" expanded="true" />
-                <element signature="e#6189#6221#0#PHP" expanded="true" />
-                <element signature="e#6315#6361#0#PHP" expanded="true" />
-                <element signature="e#6479#6511#0#PHP" expanded="true" />
-                <element signature="e#6601#6645#0#PHP" expanded="true" />
-                <element signature="e#6755#6787#0#PHP" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="1350" max-vertical-offset="3582">
+              <caret line="53" column="62" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Resources/config/services.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6" vertical-offset="0" max-vertical-offset="930">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -246,7 +150,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="s router:debug " />
       <command text="s generate:bundle" />
       <command text="s doctrine:schema:update" />
       <command text="s doctrine:schema:update --dump-sql " />
@@ -268,6 +171,10 @@
       <command text="s doctrine:schema:update --dump-sql " />
       <command text="s doctrine:schema:update --force" />
       <command text="s cache:clear" />
+      <command text="s doctrine:schema:update" />
+      <command text="s doctrine:schema:update --force" />
+      <command text="s doctrine:schema:update --dump-sql " />
+      <command text="s doctrine:schema:update --force" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -999,6 +906,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Wsza" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ReportBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pedefsza" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pedefsza" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1047,7 +988,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fos" />
+              <option name="myItemId" value="sonata" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1127,12 +1068,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="179" y="96" width="1641" height="884" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32916668" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33927578" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33927578" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980502" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24958217" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1146,6 +1087,31 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="179" y="96" width="1641" height="884" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32916668" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33927578" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32980502" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24958217" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1175,86 +1141,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sandbox/app/config/fos/fos_user.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="614">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox/app/config/fos/fos_rest.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox/app/config/routing_api.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="1152">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/a4ba7db2/fe84f702-e04a-4b51-ab95-7777299f0de8/pedefsza..Client">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/a4ba7db2/fe84f702-e04a-4b51-ab95-7777299f0de8/pedefsza..Tariff">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1980">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Controller/ClientController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1578948" vertical-offset="0" max-vertical-offset="2376">
-          <caret line="10" column="75" selection-start-line="10" selection-start-column="75" selection-end-line="10" selection-end-column="75" />
-          <folding>
-            <element signature="e#55#105#0#PHP" expanded="true" />
-            <element signature="e#626#727#0#PHP" expanded="true" />
-            <element signature="e#1054#1145#0#PHP" expanded="true" />
-            <element signature="e#1306#1402#0#PHP" expanded="true" />
-            <element signature="e#2055#2180#0#PHP" expanded="true" />
-            <element signature="e#2669#2762#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/a4ba7db2/fe84f702-e04a-4b51-ab95-7777299f0de8/pedefsza..Subscriber">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sandbox/app/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.55700326" vertical-offset="0" max-vertical-offset="614">
@@ -1317,19 +1203,6 @@
             <element signature="e#626#727#0#PHP" expanded="false" />
             <element signature="e#1054#1145#0#PHP" expanded="false" />
             <element signature="e#2055#2180#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Controller/SubscriberController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-60.0" vertical-offset="0" max-vertical-offset="2232">
-          <caret line="94" column="48" selection-start-line="94" selection-start-column="48" selection-end-line="94" selection-end-column="48" />
-          <folding>
-            <element signature="e#638#743#0#PHP" expanded="true" />
-            <element signature="e#1074#1165#0#PHP" expanded="true" />
-            <element signature="e#1326#1422#0#PHP" expanded="true" />
-            <element signature="e#2083#2208#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1537,14 +1410,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
-          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sandbox/vendor/jms/serializer/src/JMS/Serializer/GenericSerializationVisitor.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15332198" vertical-offset="54" max-vertical-offset="2898">
@@ -1577,7 +1442,7 @@
         <state vertical-scroll-proportion="0.30664396" vertical-offset="0" max-vertical-offset="587">
           <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding>
-            <element signature="e#172#200#0#PHP" expanded="true" />
+            <element signature="e#172#200#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1595,66 +1460,6 @@
         <state vertical-scroll-proportion="0.7052811" vertical-offset="1242" max-vertical-offset="3888">
           <caret line="120" column="9" selection-start-line="120" selection-start-column="9" selection-end-line="120" selection-end-column="9" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Entity/Client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="47.333332" vertical-offset="1404" max-vertical-offset="6480">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-          <folding>
-            <element signature="e#49#88#0#PHP" expanded="true" />
-            <element signature="e#227#249#0#PHP" expanded="true" />
-            <element signature="e#269#374#0#PHP" expanded="true" />
-            <element signature="e#399#483#0#PHP" expanded="true" />
-            <element signature="e#510#584#0#PHP" expanded="true" />
-            <element signature="e#611#704#0#PHP" expanded="true" />
-            <element signature="e#736#793#0#PHP" expanded="true" />
-            <element signature="e#823#880#0#PHP" expanded="true" />
-            <element signature="e#910#967#0#PHP" expanded="true" />
-            <element signature="e#1007#1064#0#PHP" expanded="true" />
-            <element signature="e#1108#1165#0#PHP" expanded="true" />
-            <element signature="e#1209#1266#0#PHP" expanded="true" />
-            <element signature="e#1313#1370#0#PHP" expanded="true" />
-            <element signature="e#1395#1452#0#PHP" expanded="true" />
-            <element signature="e#1491#1609#0#PHP" expanded="true" />
-            <element signature="e#1643#1701#0#PHP" expanded="true" />
-            <element signature="e#1736#1794#0#PHP" expanded="true" />
-            <element signature="e#1826#1884#0#PHP" expanded="true" />
-            <element signature="e#1919#2066#0#PHP" expanded="true" />
-            <element signature="e#2099#2242#0#PHP" expanded="true" />
-            <element signature="e#2419#2451#0#PHP" expanded="true" />
-            <element signature="e#2569#2627#0#PHP" expanded="true" />
-            <element signature="e#2793#2825#0#PHP" expanded="true" />
-            <element signature="e#2907#2947#0#PHP" expanded="true" />
-            <element signature="e#3041#3073#0#PHP" expanded="true" />
-            <element signature="e#3157#3198#0#PHP" expanded="true" />
-            <element signature="e#3296#3328#0#PHP" expanded="true" />
-            <element signature="e#3412#3453#0#PHP" expanded="true" />
-            <element signature="e#3551#3583#0#PHP" expanded="true" />
-            <element signature="e#3687#3738#0#PHP" expanded="true" />
-            <element signature="e#3876#3908#0#PHP" expanded="true" />
-            <element signature="e#4020#4075#0#PHP" expanded="true" />
-            <element signature="e#4229#4261#0#PHP" expanded="true" />
-            <element signature="e#4373#4428#0#PHP" expanded="true" />
-            <element signature="e#4582#4614#0#PHP" expanded="true" />
-            <element signature="e#4688#4724#0#PHP" expanded="true" />
-            <element signature="e#4802#4834#0#PHP" expanded="true" />
-            <element signature="e#4936#4986#0#PHP" expanded="true" />
-            <element signature="e#5120#5152#0#PHP" expanded="true" />
-            <element signature="e#5244#5289#0#PHP" expanded="true" />
-            <element signature="e#5403#5435#0#PHP" expanded="true" />
-            <element signature="e#5511#5548#0#PHP" expanded="true" />
-            <element signature="e#5630#5662#0#PHP" expanded="true" />
-            <element signature="e#5756#5802#0#PHP" expanded="true" />
-            <element signature="e#5920#5952#0#PHP" expanded="true" />
-            <element signature="e#6040#6083#0#PHP" expanded="true" />
-            <element signature="e#6189#6221#0#PHP" expanded="true" />
-            <element signature="e#6315#6361#0#PHP" expanded="true" />
-            <element signature="e#6479#6511#0#PHP" expanded="true" />
-            <element signature="e#6601#6645#0#PHP" expanded="true" />
-            <element signature="e#6755#6787#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1709,28 +1514,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Entity/Subscriber.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.333333" vertical-offset="486" max-vertical-offset="3312">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding>
-            <element signature="e#50#87#0#PHP" expanded="true" />
-            <element signature="e#357#414#0#PHP" expanded="true" />
-            <element signature="e#442#499#0#PHP" expanded="true" />
-            <element signature="e#530#587#0#PHP" expanded="true" />
-            <element signature="e#617#674#0#PHP" expanded="true" />
-            <element signature="e#791#914#0#PHP" expanded="true" />
-            <element signature="e#957#1108#0#PHP" expanded="true" />
-            <element signature="e#1137#1292#0#PHP" expanded="true" />
-            <element signature="e#1675#1707#0#PHP" expanded="true" />
-            <element signature="e#1787#1826#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Entity/Tariff.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9795571" vertical-offset="145" max-vertical-offset="2592">
+        <state vertical-scroll-proportion="-21.296297" vertical-offset="145" max-vertical-offset="2592">
           <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
           <folding>
             <element signature="e#50#87#0#PHP" expanded="true" />
@@ -1752,6 +1538,192 @@
             <element signature="e#2312#2344#0#PHP" expanded="true" />
             <element signature="e#2434#2478#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Controller/SubscriberController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="2232">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="46" />
+          <folding>
+            <element signature="e#638#743#0#PHP" expanded="true" />
+            <element signature="e#1074#1165#0#PHP" expanded="true" />
+            <element signature="e#1326#1422#0#PHP" expanded="true" />
+            <element signature="e#2083#2208#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Entity/Subscriber.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.407408" vertical-offset="709" max-vertical-offset="3852">
+          <caret line="74" column="9" selection-start-line="74" selection-start-column="9" selection-end-line="74" selection-end-column="9" />
+          <folding>
+            <element signature="e#50#87#0#PHP" expanded="true" />
+            <element signature="e#357#414#0#PHP" expanded="true" />
+            <element signature="e#442#499#0#PHP" expanded="true" />
+            <element signature="e#530#587#0#PHP" expanded="true" />
+            <element signature="e#617#674#0#PHP" expanded="true" />
+            <element signature="e#791#914#0#PHP" expanded="true" />
+            <element signature="e#957#1108#0#PHP" expanded="true" />
+            <element signature="e#1137#1292#0#PHP" expanded="true" />
+            <element signature="e#1325#1499#0#PHP" expanded="true" />
+            <element signature="e#1527#1584#0#PHP" expanded="true" />
+            <element signature="e#1993#2059#0#PHP" expanded="true" />
+            <element signature="e#2139#2178#0#PHP" expanded="true" />
+            <element signature="e#2268#2300#0#PHP" expanded="true" />
+            <element signature="e#2402#2452#0#PHP" expanded="true" />
+            <element signature="e#2586#2618#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/app/config/sonata/sonata_admin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1350" max-vertical-offset="3582">
+          <caret line="53" column="62" selection-start-line="53" selection-start-column="62" selection-end-line="53" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36626917" vertical-offset="2215" max-vertical-offset="8568">
+          <caret line="200" column="21" selection-start-line="200" selection-start-column="21" selection-end-line="200" selection-end-column="21" />
+          <folding>
+            <element signature="e#1167#1277#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/vendor/friendsofsymfony/user-bundle/FOS/UserBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25852782" vertical-offset="0" max-vertical-offset="557">
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/vendor/sonata-project/user-bundle/Model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27597955" vertical-offset="0" max-vertical-offset="7146">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/vendor/sonata-project/user-bundle/Entity/BaseUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49063033" vertical-offset="0" max-vertical-offset="882">
+          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="e#7#246#0#PHP" expanded="true" />
+            <element signature="e#466#515#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/src/Application/Sonata/UserBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24531516" vertical-offset="0" max-vertical-offset="587">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Admin/ClientAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.0" vertical-offset="216" max-vertical-offset="1404">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+          <folding>
+            <element signature="e#50#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/a4ba7db2/fe84f702-e04a-4b51-ab95-7777299f0de8/pedefsza..Client">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Entity/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47995418" vertical-offset="1435" max-vertical-offset="7452">
+          <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+          <folding>
+            <element signature="e#50#89#0#PHP" expanded="true" />
+            <element signature="e#228#250#0#PHP" expanded="true" />
+            <element signature="e#270#375#0#PHP" expanded="true" />
+            <element signature="e#399#483#0#PHP" expanded="true" />
+            <element signature="e#509#583#0#PHP" expanded="true" />
+            <element signature="e#610#703#0#PHP" expanded="true" />
+            <element signature="e#733#790#0#PHP" expanded="true" />
+            <element signature="e#820#877#0#PHP" expanded="true" />
+            <element signature="e#907#964#0#PHP" expanded="true" />
+            <element signature="e#1004#1061#0#PHP" expanded="true" />
+            <element signature="e#1105#1162#0#PHP" expanded="true" />
+            <element signature="e#1206#1263#0#PHP" expanded="true" />
+            <element signature="e#1310#1367#0#PHP" expanded="true" />
+            <element signature="e#1392#1449#0#PHP" expanded="true" />
+            <element signature="e#1488#1606#0#PHP" expanded="true" />
+            <element signature="e#1640#1698#0#PHP" expanded="true" />
+            <element signature="e#1733#1791#0#PHP" expanded="true" />
+            <element signature="e#1823#1881#0#PHP" expanded="true" />
+            <element signature="e#1916#2062#0#PHP" expanded="true" />
+            <element signature="e#2097#2129#0#PHP" expanded="true" />
+            <element signature="e#2207#2253#0#PHP" expanded="true" />
+            <element signature="e#2432#2467#0#PHP" expanded="true" />
+            <element signature="e#2541#2683#0#PHP" expanded="true" />
+            <element signature="e#2860#2892#0#PHP" expanded="true" />
+            <element signature="e#2976#3017#0#PHP" expanded="true" />
+            <element signature="e#3115#3147#0#PHP" expanded="true" />
+            <element signature="e#3225#3263#0#PHP" expanded="true" />
+            <element signature="e#3349#3381#0#PHP" expanded="true" />
+            <element signature="e#3499#3557#0#PHP" expanded="true" />
+            <element signature="e#3723#3755#0#PHP" expanded="true" />
+            <element signature="e#3837#3877#0#PHP" expanded="true" />
+            <element signature="e#3971#4003#0#PHP" expanded="true" />
+            <element signature="e#4087#4128#0#PHP" expanded="true" />
+            <element signature="e#4226#4258#0#PHP" expanded="true" />
+            <element signature="e#4342#4383#0#PHP" expanded="true" />
+            <element signature="e#4481#4513#0#PHP" expanded="true" />
+            <element signature="e#4617#4668#0#PHP" expanded="true" />
+            <element signature="e#4806#4838#0#PHP" expanded="true" />
+            <element signature="e#4950#5005#0#PHP" expanded="true" />
+            <element signature="e#5159#5191#0#PHP" expanded="true" />
+            <element signature="e#5303#5358#0#PHP" expanded="true" />
+            <element signature="e#5512#5544#0#PHP" expanded="true" />
+            <element signature="e#5618#5654#0#PHP" expanded="true" />
+            <element signature="e#5732#5764#0#PHP" expanded="true" />
+            <element signature="e#5866#5916#0#PHP" expanded="true" />
+            <element signature="e#6050#6082#0#PHP" expanded="true" />
+            <element signature="e#6174#6219#0#PHP" expanded="true" />
+            <element signature="e#6333#6365#0#PHP" expanded="true" />
+            <element signature="e#6441#6478#0#PHP" expanded="true" />
+            <element signature="e#6560#6592#0#PHP" expanded="true" />
+            <element signature="e#6686#6732#0#PHP" expanded="true" />
+            <element signature="e#6850#6882#0#PHP" expanded="true" />
+            <element signature="e#6970#7013#0#PHP" expanded="true" />
+            <element signature="e#7119#7151#0#PHP" expanded="true" />
+            <element signature="e#7245#7291#0#PHP" expanded="true" />
+            <element signature="e#7409#7441#0#PHP" expanded="true" />
+            <element signature="e#7531#7575#0#PHP" expanded="true" />
+            <element signature="e#7685#7717#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sandbox/src/Wsza/Bundle/ReportBundle/Resources/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6" vertical-offset="0" max-vertical-offset="930">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

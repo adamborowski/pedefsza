@@ -1,5 +1,6 @@
 <?php
 namespace Wsza\Bundle\ReportBundle\Entity;
+
 use  JMS\Serializer\Annotation\Exclude;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
@@ -16,13 +17,11 @@ class Client
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-
     /**
      * @ORM\Column(type="string", length=100)
      * np Orange Polska SA
      */
     protected $name;
-
     /**
      * @ORM\Column(type="string", length=100)
      * np orange
@@ -34,8 +33,6 @@ class Client
      * SHA-256 hash
      */
     protected $password;
-
-
     /**
      * @ORM\Column(type="string", length=100)
      */
@@ -86,14 +83,39 @@ class Client
      */
     protected $postReportUrl;
     /**
-     * @ORM\OneToMany(targetEntity="Subscriber", cascade={"persist", "remove"}, mappedBy="client")
-     * @Assert\Valid
+     * @ORM\OneToMany(targetEntity="Subscriber", cascade={"persist", "remove"}, mappedBy="client", fetch="EXTRA_LAZY")
      * @Exclude
      */
     protected $subscribers;
+
+
     /**
-     * @ORM\OneToMany(targetEntity="Tariff", cascade={"persist", "remove"}, mappedBy="client")
-     * @Assert\Valid
+     * @return mixed
+     */
+    public function getPlainPassword()
+    {
+        return null;
+    }
+
+    /**
+     * @param mixed $plainPassword
+     */
+    public function setPlainPassword($plainPassword)
+    {
+        if (empty($plainPassword) == false)
+            $this->setPassword(hash("sha256", $plainPassword));
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @ORM\OneToMany(targetEntity="Tariff", cascade={"persist", "remove"}, mappedBy="client", fetch="EXTRA_LAZY")
      * @Exclude
      */
     protected $tariffs;
@@ -102,6 +124,38 @@ class Client
     {
         $this->subscribers = new ArrayCollection();
         $this->tariffs = new ArrayCollection();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * @param mixed $password
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLogin()
+    {
+        return $this->login;
+    }
+
+    /**
+     * @param mixed $login
+     */
+    public function setLogin($login)
+    {
+        $this->login = $login;
     }
 
     /**

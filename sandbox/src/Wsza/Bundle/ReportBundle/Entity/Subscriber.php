@@ -59,11 +59,55 @@ class Subscriber
      * @Assert\Valid
      */
     protected $client;
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    protected $bankAccountNumber;
 
     public function __construct()
     {
         $this->reports = new ArrayCollection();
         $this->connections = new ArrayCollection();
+    }
+
+    public function lookupBankAccountNumber(){
+        if( $this->bankAccountNumber==null)
+        {
+            return $this->getClient()->getBankAccountNumber();
+        }
+        return $this->bankAccountNumber;
+    }
+
+    /**
+     * @return \Wsza\Bundle\ReportBundle\Entity\Client
+     */
+    public function getClient()
+    {
+        return $this->client;
+    }
+
+    /**
+     * @param mixed $client
+     */
+    public function setClient($client)
+    {
+        $this->client = $client;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBankAccountNumber()
+    {
+        return $this->bankAccountNumber;
+    }
+
+    /**
+     * @param mixed $bankAccountNumber
+     */
+    public function setBankAccountNumber($bankAccountNumber)
+    {
+        $this->bankAccountNumber = $bankAccountNumber;
     }
 
     /**
@@ -80,22 +124,6 @@ class Subscriber
     public function setNumber($number)
     {
         $this->number = $number;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getClient()
-    {
-        return $this->client;
-    }
-
-    /**
-     * @param mixed $client
-     */
-    public function setClient($client)
-    {
-        $this->client = $client;
     }
 
     /**

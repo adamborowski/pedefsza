@@ -16,3 +16,16 @@ services:
       class:     Wsza\Bundle\ReportBundle\Serializer\ForeignKeyHandler
       tags:
           - { name: jms_serializer.subscribing_handler }
+
+
+  # admin services
+  sonata.admin.client:
+          class: Wsza\Bundle\ReportBundle\Admin\ClientAdmin
+          tags:
+              - { name: sonata.admin, manager_type: orm, group: "Content", label: "Client" }
+          arguments:
+              - ~
+              - Wsza\Bundle\ReportBundle\Entity\Client
+              - ~
+          calls:
+              - [ setTranslationDomain, [ReportBundle]]
