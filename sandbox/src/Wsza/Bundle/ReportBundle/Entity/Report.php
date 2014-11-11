@@ -1,6 +1,6 @@
 <?php
 namespace Wsza\Bundle\ReportBundle\Entity;
-use JMS\Serializer\Annotation\Exclude;
+use JMS\Serializer\Annotation as JMS;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -32,7 +32,7 @@ class Report
     protected $reportTime;
     /**
      * @ORM\ManyToOne(targetEntity="Subscriber", inversedBy="reports")
-     * @Exclude
+     * @JMS\Type("Wsza\Bundle\ReportBundle\Serializer\ForeignKeyType")
      */
     protected $subscriber;
 

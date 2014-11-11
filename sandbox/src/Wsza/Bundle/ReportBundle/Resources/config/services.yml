@@ -1,10 +1,18 @@
-services:
-    my_handler:
-      class: Wsza\Bundle\ReportBundle\Serializer\ForeignKeyType
-      tags:
-        - { name: jms_serializer.handler, direction: serialization, format: json, type: Integer}
-      arguments:
-        - { type: service, id: @doctrine.orm.entity_manager }
+#services:
+#    my_handler:
+#      class: Wsza\Bundle\ReportBundle\Serializer\ForeignKeyType
+#      tags:
+#        - { name: jms_serializer.subscribing_handler, format: json }
+#      arguments: [@my_manager]
+#    my_manager:
+#      class: Sonata\OrderBundle\Entity\OrderManager
+#      arguments: [Wsza\Bundle\ReportBundle\Entity\Subscriber, @doctrine]
 #    report.example:
 #        class: Wsza\Bundle\ReportBundle\Example
 #        arguments: [@service_id, "plain_value", %parameter%]
+
+services:
+  foreignHandler:
+      class:     Wsza\Bundle\ReportBundle\Serializer\ForeignKeyHandler
+      tags:
+          - { name: jms_serializer.subscribing_handler }

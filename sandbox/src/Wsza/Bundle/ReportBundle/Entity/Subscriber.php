@@ -55,7 +55,7 @@ class Subscriber
     protected $connections;
     /**
      * @ORM\ManyToOne(targetEntity="Client", inversedBy="subscribers")
-     * @JMS\Type("my_handler")
+     * @JMS\Type("Wsza\Bundle\ReportBundle\Serializer\ForeignKeyType")
      * @Assert\Valid
      */
     protected $client;

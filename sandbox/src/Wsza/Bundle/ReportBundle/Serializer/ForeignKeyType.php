@@ -1,24 +1,14 @@
 <?php
-
-/*
- * This file is part of the Sonata package.
- *
- * (c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+/**
+ * Created by PhpStorm.
+ * User: adam
+ * Date: 11.11.14
+ * Time: 16:33
  */
 
 namespace Wsza\Bundle\ReportBundle\Serializer;
 
 
-use Sonata\CoreBundle\Serializer\BaseSerializerHandler;
-
-class ForeignKeyType extends BaseSerializerHandler
-{
-    public static function getType()
-    {
-        return 'my_handler';
-    }
+class ForeignKeyType {
 
 }
