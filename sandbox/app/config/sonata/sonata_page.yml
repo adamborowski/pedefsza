@@ -17,10 +17,12 @@ sonata_page:
     ignore_uri_patterns:
         - ^/admin(.*)
         - ^/api/(.*)
+        - ^/report/(.*)
 
     ignore_route_patterns:
         - (.*)admin(.*)     # ignore admin route, ie route containing 'admin'
         - ^_(.*)            # ignore symfony routes
+        - ^gen_(.*)            # ignore Pedefsza
 
     ignore_routes:
         - sonata_page_cache_esi

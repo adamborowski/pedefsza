@@ -1,3 +1,3 @@
-gen_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: GenBundle:Default:index }
+gen_render:
+    path:     /report/generate/{_format}/subscriber/{subscriberId}/{validDate}
+    defaults: { _controller: GenBundle:Default:generate }

@@ -1,1 +1,109 @@
-Hello {{ name }}!
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Faktura VAT nr {{ '%011d'|format(report.id) }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {#<link rel="stylesheet" href="css/normalize.css">#}
+    <link rel="stylesheet" href="{{ asset('compass/stylesheets/screen.css', absolute=true) }}">
+</head>
+<body>
+
+<h1>Faktura VAT nr {{ '%011d'|format(report.id) }}</h1>
+
+<p>Oryginał</p>
+
+<p class="creationDate">Data wystawienia faktury:
+    <date>{{ startTime|date('d.m.Y') }}</date>
+</p>
+<div class="clientDetails">
+    <p>{{ client.name }}</p>
+
+    <p>{{ client.address1 }}</p>
+
+    <p>{{ client.address2 }}</p>
+
+    <p>NIP: {{ client.nip }}</p>
+</div>
+
+<div class="subscriberDetails">
+    <header>Nabywca</header>
+
+    <p>{{ subscriber.firstName }} {{ subscriber.lastName }}</p>
+
+    <p>{{ subscriber.address1 }}</p>
+
+    <p>{{ subscriber.address2 }}</p>
+
+    <p>Numer konta klienta: {{ '%08d'|format(subscriber.id) }}</p>
+</div>
+<div class="costsTable">
+
+    <table>
+        <caption>Opłaty naliczone w okresie <strong>{{ startTime|date('d.m.Y') }}</strong> - <strong>{{ endTime|date('d.m.Y') }}</strong></caption>
+        <thead>
+        <tr>
+            <th></th>
+            <th>Ilość</th>
+            <th>Stawka</th>
+            <th>Wartość NETTO</th>
+            <th>Stawka VAT</th>
+            <th>Kwota VAT</th>
+            <th>Wartość BRUTTO</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for cost in costs %}
+            <tr>
+                <th>{{ cost.tariff.name }}</th>
+                <td>{{ cost.factor }} {{ cost.unit }}</td>
+                <td>{{ cost.tariff.price }} PLN</td>
+                <td>{{ cost.costs|number_format(2) }} PLN</td>
+                <td>{{ cost.tariff.vat*100 }}%</td>
+                <td>{{ cost.vatCosts|number_format(2) }} PLN</td>
+                <td>{{ cost.brutto|number_format(2) }} PLN</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+        <tfoot>
+        <tr>
+            <td>Łącznie</td>
+            <td></td>
+            <td></td>
+            <td>{{ sumNetto|number_format(2) }} PLN</td>
+            <td></td>
+            <td>{{ sumVat|number_format(2) }} PLN</td>
+            <td>{{ sumBrutto|number_format(2) }} PLN</td>
+        </tr>
+        </tfoot>
+    </table>
+    <p>Płatność do: {{ paymentTime|date('d.m.Y') }}</p>
+
+    <p class="payment">Do zapłaty: <strong>{{ sumBrutto|number_format(2) }} PLN</strong></p>
+</div>
+
+<div class="correspondenceDetails">
+    <header>Adres do korespondencji</header>
+    <p>{{ client.correspondenceName }}</p>
+
+    <p>{{ client.correspondenceAddress1 }}</p>
+
+    <p>{{ client.correspondenceAddress2 }}</p>
+
+    <p>tel. {{ client.correspondencePhoneNumber }}</p>
+</div>
+
+<div class="paymentDetails">
+    <p>Płatne przelewem na rachunek: <strong>{{ subscriber.lookupBankAccountNumber() }}</strong></p>
+
+    <p>Tytułem: <strong>FVT-{{ '%011d'|format(report.id) }}/{{ startTime|date('Ymd') }}/{{ '%08d'|format(subscriber.id) }}</strong></p>
+
+    {#<p>{{ barImage|raw }}</p>#}
+</div>
+
+</body>
+</html>
+
+

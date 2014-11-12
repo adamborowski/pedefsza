@@ -89,7 +89,7 @@ class LoadReportData extends AbstractFixture implements ContainerAwareInterface
             $connection->setTariff($tariffs[rand(0, $countMinus1)]);
             $connection->setNumber(rand(501404505, 890800200));
             //
-            $seconds = rand(400, 36000);
+            $seconds = rand(1300, 156000);
             $date->add(new \DateInterval("PT${seconds}S"));
 
         }
@@ -102,6 +102,7 @@ class LoadReportData extends AbstractFixture implements ContainerAwareInterface
         $tariff->setCountingMethod($type);
         $tariff->setName($name);
         $tariff->setPrice($price);
+        $tariff->setVat(0.23);
         $this->manager->persist($tariff);
         $this->currentClient->getTariffs()->add($tariff);
         return $tariff;

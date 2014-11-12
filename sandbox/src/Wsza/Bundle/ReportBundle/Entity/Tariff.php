@@ -31,6 +31,27 @@ class Tariff
      * cena np za sekundę, za rozpoczętą minutę, za połączenie
      */
     protected $price;
+
+    /**
+     * @return mixed
+     */
+    public function getVat()
+    {
+        return $this->vat;
+    }
+
+    /**
+     * @param mixed $vat
+     */
+    public function setVat($vat)
+    {
+        $this->vat = $vat;
+    }
+    /**
+     * @ORM\Column(type="decimal", precision=2, scale=2)
+     * vat
+     */
+    protected $vat;
     /**
      * @ORM\ManyToOne(targetEntity="Client", inversedBy="tariffs")
      * @JMS\Type("Wsza\Bundle\ReportBundle\Serializer\ForeignKeyType")
@@ -133,6 +154,35 @@ class Tariff
     public function setConnections($connections)
     {
         $this->connections = $connections;
+    }
+
+    public function countCosts($numConnections, $numSeconds)
+    {
+        $numMinutes = floor($numSeconds / 60);
+        switch ($this->getCountingMethod()) {
+            case "seconds":
+                return array(
+                    'factor' => $numMinutes,
+                    'unit' => 'min.',
+                    'costs' => $numSeconds / 60 * $this->getPrice()
+                );
+                break;
+            case "minutes":
+                return array(
+                    'factor' => $numMinutes,
+                    'unit' => 'min.',
+                    'costs' => $numMinutes * $this->getPrice()
+                );
+                break;
+            case "single":
+                return array(
+                    'factor' => $numConnections,
+                    'unit' => 'połączeń',
+                    'costs' => $numConnections * $this->getPrice()
+                );
+                break;
+        }
+        return null;
     }
 
 

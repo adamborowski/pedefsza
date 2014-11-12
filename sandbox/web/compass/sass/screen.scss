@@ -1,0 +1,122 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import "compass/reset";
+
+body, html {
+  margin: 0;
+  width: 210mm;
+  height: 297mm;
+  font-family: Helvetica, Arial, serif;
+  font-size: 11pt;
+}
+
+strong {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.4em;
+  margin: 4mm;
+  text-align: center;
+}
+
+.costsTable {
+  text-align: center;
+  .payment {
+    border: 1px solid #909090;
+    background: #eeeeee;
+    margin: auto;
+    display: inline-block;
+    padding: 8mm;
+  }
+  $border: 1px solid #838383;
+  margin: 5mm;
+  table {
+    border: $border;
+    border-collapse: collapse;
+    caption {
+      text-align: center;
+      padding: 4mm;
+    }
+    td, th {
+      border: $border;
+      padding: 2mm;
+    }
+    thead th {
+      background: #dadada;
+    }
+    tbody {
+      th {
+        background: #dadada;
+      }
+      td {
+        text-align: right;
+      }
+    }
+    tfoot {
+      td {
+        background: #fcfbbb;
+      }
+      td {
+        font-weight: bold;
+        text-align: right;
+      }
+    }
+  }
+  p {
+    margin: 1cm;
+    text-align: center;
+  }
+}
+
+.correspondenceDetails, .subscriberDetails, .clientDetails {
+  border: 1px solid #dedede;
+  display: inline-block;
+  padding: 3mm;
+  header {
+    font-size: 1.3em;
+    margin-bottom: 3mm;
+  }
+
+  p {
+
+  }
+}
+
+.clientDetails {
+  float: right;
+  text-align: right;;
+}
+
+.subscriberDetails {
+  margin-top: 4mm;
+}
+
+.paymentDetails {
+  margin: 1cm;
+  text-align: center;
+  p{
+    margin:6mm;
+  }
+}
+
+.creationDate {
+  text-align: center;
+  date {
+    font-weight: bold;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+@media print {
+  html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+  /* ... the rest of the rules ... */
+}

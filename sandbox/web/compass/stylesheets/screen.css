@@ -1,0 +1,200 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 7, ../sass/screen.scss */
+body, html {
+  margin: 0;
+  width: 210mm;
+  height: 297mm;
+  font-family: Helvetica, Arial, serif;
+  font-size: 11pt;
+}
+
+/* line 15, ../sass/screen.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 19, ../sass/screen.scss */
+h1 {
+  font-size: 1.4em;
+  margin: 4mm;
+  text-align: center;
+}
+
+/* line 25, ../sass/screen.scss */
+.costsTable {
+  text-align: center;
+  margin: 5mm;
+}
+/* line 27, ../sass/screen.scss */
+.costsTable .payment {
+  border: 1px solid #909090;
+  background: #eeeeee;
+  margin: auto;
+  display: inline-block;
+  padding: 8mm;
+}
+/* line 36, ../sass/screen.scss */
+.costsTable table {
+  border: 1px solid #838383;
+  border-collapse: collapse;
+}
+/* line 39, ../sass/screen.scss */
+.costsTable table caption {
+  text-align: center;
+  padding: 4mm;
+}
+/* line 43, ../sass/screen.scss */
+.costsTable table td, .costsTable table th {
+  border: 1px solid #838383;
+  padding: 2mm;
+}
+/* line 47, ../sass/screen.scss */
+.costsTable table thead th {
+  background: #dadada;
+}
+/* line 51, ../sass/screen.scss */
+.costsTable table tbody th {
+  background: #dadada;
+}
+/* line 54, ../sass/screen.scss */
+.costsTable table tbody td {
+  text-align: right;
+}
+/* line 59, ../sass/screen.scss */
+.costsTable table tfoot td {
+  background: #fcfbbb;
+}
+/* line 62, ../sass/screen.scss */
+.costsTable table tfoot td {
+  font-weight: bold;
+  text-align: right;
+}
+/* line 68, ../sass/screen.scss */
+.costsTable p {
+  margin: 1cm;
+  text-align: center;
+}
+
+/* line 74, ../sass/screen.scss */
+.correspondenceDetails, .subscriberDetails, .clientDetails {
+  border: 1px solid #dedede;
+  display: inline-block;
+  padding: 3mm;
+}
+/* line 78, ../sass/screen.scss */
+.correspondenceDetails header, .subscriberDetails header, .clientDetails header {
+  font-size: 1.3em;
+  margin-bottom: 3mm;
+}
+
+/* line 88, ../sass/screen.scss */
+.clientDetails {
+  float: right;
+  text-align: right;
+}
+
+/* line 93, ../sass/screen.scss */
+.subscriberDetails {
+  margin-top: 4mm;
+}
+
+/* line 97, ../sass/screen.scss */
+.paymentDetails {
+  margin: 1cm;
+  text-align: center;
+}
+/* line 100, ../sass/screen.scss */
+.paymentDetails p {
+  margin: 6mm;
+}
+
+/* line 105, ../sass/screen.scss */
+.creationDate {
+  text-align: center;
+}
+/* line 107, ../sass/screen.scss */
+.creationDate date {
+  font-weight: bold;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+@media print {
+  /* line 117, ../sass/screen.scss */
+  html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+
+  /* ... the rest of the rules ... */
+}
