@@ -54,6 +54,10 @@ sonata_admin:
                 icon:            '<i class="fa fa-puzzle-piece"></i>'
                 items:
                     - sonata.admin.client
+                    - sonata.admin.subscriber
+                    - sonata.admin.tariff
+                    - sonata.admin.connection
+                    - sonata.admin.report
             sonata.admin.group.content:
                 label:           sonata_content
                 label_catalogue: SonataDemoBundle

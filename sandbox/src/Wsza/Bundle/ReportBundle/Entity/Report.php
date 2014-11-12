@@ -1,5 +1,6 @@
 <?php
 namespace Wsza\Bundle\ReportBundle\Entity;
+
 use JMS\Serializer\Annotation as JMS;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
@@ -31,10 +32,30 @@ class Report
      */
     protected $reportTime;
     /**
+     * @ORM\Column(type="string", length=2048, nullable=true)
+     */
+    protected $filePath;
+    /**
      * @ORM\ManyToOne(targetEntity="Subscriber", inversedBy="reports")
      * @JMS\Type("Wsza\Bundle\ReportBundle\Serializer\ForeignKeyType")
      */
     protected $subscriber;
+
+    /**
+     * @return mixed
+     */
+    public function getFilePath()
+    {
+        return $this->filePath;
+    }
+
+    /**
+     * @param mixed $filePath
+     */
+    public function setFilePath($filePath)
+    {
+        $this->filePath = $filePath;
+    }
 
     /**
      * @return mixed

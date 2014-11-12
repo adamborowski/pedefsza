@@ -59,6 +59,15 @@ class Subscriber
      * @Assert\Valid
      */
     protected $client;
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
     /**
      * @ORM\Column(type="string", length=100)
      */
@@ -70,9 +79,9 @@ class Subscriber
         $this->connections = new ArrayCollection();
     }
 
-    public function lookupBankAccountNumber(){
-        if( $this->bankAccountNumber==null)
-        {
+    public function lookupBankAccountNumber()
+    {
+        if ($this->bankAccountNumber == null) {
             return $this->getClient()->getBankAccountNumber();
         }
         return $this->bankAccountNumber;
@@ -244,5 +253,15 @@ class Subscriber
     public function setConnections($connections)
     {
         $this->connections = $connections;
+    }
+
+    protected $displayName;
+
+    /**
+     * @return string
+     */
+    public function getDisplayName()
+    {
+        return "{$this->firstName} {$this->lastName}";
     }
 }

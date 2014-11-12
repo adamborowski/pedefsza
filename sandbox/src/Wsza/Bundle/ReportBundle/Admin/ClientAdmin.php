@@ -41,9 +41,9 @@ class ClientAdmin extends Admin
             ->end()
             ->end()
             ->tab('API')
-            ->add('subscriberUrl')
-            ->add('billingUrl')
-            ->add('postReportUrl')
+            ->add('subscriberUrl', 'url')
+            ->add('billingUrl', 'url')
+            ->add('postReportUrl', 'url')
             ->end()
             ->end()
             //TODO zrobić plainPassword jak w przypadku FosUserBundle

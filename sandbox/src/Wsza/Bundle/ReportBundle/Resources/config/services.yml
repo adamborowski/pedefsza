@@ -29,3 +29,43 @@ services:
               - ~
           calls:
               - [ setTranslationDomain, [ReportBundle]]
+  sonata.admin.subscriber:
+          class: Wsza\Bundle\ReportBundle\Admin\SubscriberAdmin
+          tags:
+              - { name: sonata.admin, manager_type: orm, group: "Content", label: "Subscriber" }
+          arguments:
+              - ~
+              - Wsza\Bundle\ReportBundle\Entity\Subscriber
+              - ~
+          calls:
+              - [ setTranslationDomain, [ReportBundle]]
+  sonata.admin.tariff:
+          class: Wsza\Bundle\ReportBundle\Admin\TariffAdmin
+          tags:
+              - { name: sonata.admin, manager_type: orm, group: "Content", label: "Tariff" }
+          arguments:
+              - ~
+              - Wsza\Bundle\ReportBundle\Entity\Tariff
+              - ~
+          calls:
+              - [ setTranslationDomain, [ReportBundle]]
+  sonata.admin.connection:
+          class: Wsza\Bundle\ReportBundle\Admin\ConnectionAdmin
+          tags:
+              - { name: sonata.admin, manager_type: orm, group: "Content", label: "Connection" }
+          arguments:
+              - ~
+              - Wsza\Bundle\ReportBundle\Entity\Connection
+              - ~
+          calls:
+              - [ setTranslationDomain, [ReportBundle]]
+  sonata.admin.report:
+          class: Wsza\Bundle\ReportBundle\Admin\ReportAdmin
+          tags:
+              - { name: sonata.admin, manager_type: orm, group: "Content", label: "Report" }
+          arguments:
+              - ~
+              - Wsza\Bundle\ReportBundle\Entity\Report
+              - ~
+          calls:
+              - [ setTranslationDomain, [ReportBundle]]
