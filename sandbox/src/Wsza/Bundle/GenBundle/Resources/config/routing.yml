@@ -1,0 +1,3 @@
+gen_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: GenBundle:Default:index }

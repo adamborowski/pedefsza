@@ -1,3 +1,7 @@
+gen:
+    resource: "@GenBundle/Resources/config/routing.yml"
+    prefix:   /
+
 report:
     resource: "@ReportBundle/Resources/config/routing.yml"
     prefix:   /

@@ -125,6 +125,7 @@ class AppKernel extends Kernel
 
             new Mopa\Bundle\BootstrapBundle\MopaBootstrapBundle(),
             new Wsza\Bundle\ReportBundle\ReportBundle(),
+            new Wsza\Bundle\GenBundle\GenBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
