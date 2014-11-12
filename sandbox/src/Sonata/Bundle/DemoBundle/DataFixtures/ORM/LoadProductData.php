@@ -71,7 +71,7 @@ class LoadProductData extends AbstractFixture implements OrderedFixtureInterface
 
         $dummyMedia = $this->createMedia(__DIR__.'/../data/files/sonata_logo.png', 'Dummy', 'Dummy product');
 
-        $dummyProductsCount = 501;
+        $dummyProductsCount = 14;
 
         for ($i = 1; $i < $dummyProductsCount; $i++) {
             // Goodies products

@@ -68,7 +68,7 @@ class LoadOrderData extends AbstractFixture implements ContainerAwareInterface, 
         $basket->setCurrency($currency);
         $basket->setProductPool($this->getProductPool());
 
-        $nbCustomers = 100;
+        $nbCustomers = 13;
 
         $products = array(
             $this->getReference('php_plush_blue_goodie_product'),

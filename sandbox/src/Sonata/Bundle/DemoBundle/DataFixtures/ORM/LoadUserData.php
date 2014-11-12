@@ -62,7 +62,7 @@ class LoadUserData extends AbstractFixture implements ContainerAwareInterface, O
 
         $this->addReference('user-admin', $user);
 
-        foreach (range(1, 20) as $id) {
+        foreach (range(1, 4) as $id) {
             $user = $manager->createUser();
             $user->setUsername($faker->userName . $id);
             $user->setEmail($faker->safeEmail);
