@@ -63,7 +63,7 @@ class LoadNewsData extends AbstractFixture implements ContainerAwareInterface, O
         $collection->setName('General');
         $this->getCollectionManager()->save($collection);
 
-        foreach (range(1, 20) as $id) {
+        foreach (range(1, 10) as $id) {
             $post = $postManager->create();
             $post->setAuthor($this->getReference('user-johndoe'));
 

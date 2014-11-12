@@ -47,6 +47,7 @@ class LoadProductData extends AbstractFixture implements OrderedFixtureInterface
      */
     public function load(ObjectManager $manager)
     {
+        return
         $productPool = $this->getProductPool();
 
         // default media

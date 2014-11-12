@@ -61,6 +61,7 @@ class LoadOrderData extends AbstractFixture implements ContainerAwareInterface, 
      */
     public function load(ObjectManager $manager)
     {
+        return
         $currency = new Currency();
         $currency->setLabel('EUR');
 

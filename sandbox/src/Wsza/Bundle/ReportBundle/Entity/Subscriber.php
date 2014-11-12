@@ -69,7 +69,7 @@ class Subscriber
     }
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=100, nullable=true)
      */
     protected $bankAccountNumber;
 
