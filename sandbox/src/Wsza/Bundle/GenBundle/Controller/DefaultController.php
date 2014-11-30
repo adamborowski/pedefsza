@@ -16,11 +16,12 @@ use Wsza\Bundle\ReportBundle\Entity\Tariff;
 
 class DefaultController extends Controller
 {
-    private $wszaUrl = 'http://localhost:8000/init/fvat/';
+    private $wszaUrl = ':8000/init/fvat/';
+    private $reqHost;
 
     private function getURL($part)
     {
-        return $this->wszaUrl . $part;
+        return 'http://' . $this->reqHost . $this->wszaUrl . $part;
     }
 
     private function lookupTariffs($client)
@@ -93,10 +94,10 @@ class DefaultController extends Controller
     public function generateAction(Request $request, $subscriberId, $validDate)
     {
 
-
+        $this->reqHost = $request->getClientIp();
         $client = explode(':', base64_decode(substr($request->headers->get('authorization'), 6)));
 
-        if (count($client) == 0) {
+        if (count($client) < 2 || $client == "") {
             //tryb debug nie wymaga uwirzeytelnienia
             $client = array('wsza', 'wsza');
         }
