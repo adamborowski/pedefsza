@@ -77,7 +77,8 @@
 
         "incenteev/composer-parameter-handler": "~2.0",
         "hackzilla/barcode-bundle": "~1.0",
-        "knplabs/knp-snappy-bundle": "dev-master"
+        "knplabs/knp-snappy-bundle": "dev-master",
+        "leaseweb/api-caller-bundle": "*"
     },
 
     "require-dev": {

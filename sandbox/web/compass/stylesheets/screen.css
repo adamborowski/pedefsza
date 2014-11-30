@@ -69,11 +69,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 7, ../sass/screen.scss */
 body, html {
-  margin: 0;
   width: 210mm;
   height: 297mm;
   font-family: Helvetica, Arial, serif;
   font-size: 11pt;
+  margin: auto;
 }
 
 /* line 15, ../sass/screen.scss */

@@ -52,6 +52,27 @@ class ClientController extends Controller implements ClassResourceInterface
             'entity' => $entity,
         );
     }
+    /**
+     * Get action
+     * @var integer $id Id of the entity
+     * @return array
+     */
+    public function getTariffsAction($id)
+    {
+        $entity = $this->getEntity($id)->getTariffs();
+
+        return array(
+            'entity' => $entity,
+        );
+    }
+    public function getSubscribersAction($id)
+    {
+        $entity = $this->getEntity($id)->getSubscribers();
+
+        return array(
+            'entity' => $entity,
+        );
+    }
 
     /**
      * Collection post action

@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {#<link rel="stylesheet" href="css/normalize.css">#}
-    <link rel="stylesheet" href="{{ asset('compass/stylesheets/screen.css', absolute=true) }}">
+    <link rel="stylesheet"  href="{{ asset('compass/stylesheets/screen.css', absolute=true) }}">
 </head>
 <body>
 
@@ -84,6 +84,14 @@
     <p class="payment">Do zapłaty: <strong>{{ sumBrutto|number_format(2) }} PLN</strong></p>
 </div>
 
+<div class="paymentDetails">
+    <p>Płatne przelewem na rachunek: <strong>{{ subscriber.lookupBankAccountNumber() }}</strong></p>
+
+    <p>Tytułem: <strong>FVT-{{ '%011d'|format(report.id) }}/{{ startTime|date('Ymd') }}/{{ '%08d'|format(subscriber.id) }}</strong></p>
+
+    {#<p>{{ barImage|raw }}</p>#}
+</div>
+
 <div class="correspondenceDetails">
     <header>Adres do korespondencji</header>
     <p>{{ client.correspondenceName }}</p>
@@ -93,14 +101,6 @@
     <p>{{ client.correspondenceAddress2 }}</p>
 
     <p>tel. {{ client.correspondencePhoneNumber }}</p>
-</div>
-
-<div class="paymentDetails">
-    <p>Płatne przelewem na rachunek: <strong>{{ subscriber.lookupBankAccountNumber() }}</strong></p>
-
-    <p>Tytułem: <strong>FVT-{{ '%011d'|format(report.id) }}/{{ startTime|date('Ymd') }}/{{ '%08d'|format(subscriber.id) }}</strong></p>
-
-    {#<p>{{ barImage|raw }}</p>#}
 </div>
 
 </body>

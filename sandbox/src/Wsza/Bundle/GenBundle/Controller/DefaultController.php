@@ -3,6 +3,7 @@
 namespace Wsza\Bundle\GenBundle\Controller;
 
 use Doctrine\ORM\EntityManager;
+use Lsw\ApiCallerBundle\Call\HttpGetJson;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -12,8 +13,39 @@ use Wsza\Bundle\ReportBundle\Entity\Tariff;
 
 class DefaultController extends Controller
 {
+    private $wszaUrl = 'http://localhost:8000/init/fvat/';
+
+    private function getURL($part)
+    {
+        return $this->wszaUrl . $part;
+    }
+
+    private function lookupSubscriber($id)
+    {
+        $url = $this->getURL("subscriber/$id");
+        $request = $this->get('api_caller')->call(new HttpGetJson($url, Request::create($url)));
+        $d = $request->data;
+        $sub = new Subscriber();
+        $sub->setId($d->id);
+        $sub->setFirstName($d->first_name);
+        $sub->setLastName($d->last_name);
+        $sub->setAddress1($d->address1);
+        $sub->setAddress2($d->address2);
+        $sub->setNumber($d->number);
+        $sub->setAccountingPeriodStart($d->accounting_period_start);
+//        $this->getDoctrine()->getManager()->persist($sub);
+        return $sub;
+    }
+
     public function generateAction(Request $request, $subscriberId, $validDate)
     {
+
+
+        $client = explode(':', base64_decode(substr($request->headers->get('authorization'), 6)));
+
+        $user = $client[0];
+        $pass = $client[1];
+
 
         /**
          * @var $em EntityManager
@@ -21,6 +53,9 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
         /** @var Subscriber $subscriber */
         $subscriber = $em->getRepository('ReportBundle:Subscriber')->find($subscriberId);
+        if ($subscriber == null) {
+            $subscriber = $this->lookupSubscriber($subscriberId);
+        }
         $startTime = $this->prepareStartTime($subscriber, new \DateTime($validDate));
         $endTime = clone $startTime;
         $endTime->modify('+1 month');
@@ -29,12 +64,11 @@ class DefaultController extends Controller
         $paymentTime->modify("+${delay}day");
         $tariffs = $subscriber->getClient()->getTariffs();
         $sumQuery = $em->createQuery("
-SELECT count(c) , sum(c.endTime-c.startTime)FROM ReportBundle:Connection c
+SELECT count(c) , sum(c.endTime-c.startTime) FROM ReportBundle:Connection c
  WHERE c.subscriber = :subscriber
  AND c.tariff=:tariff
  AND c.startTime >= :startTime
  AND c.endTime < :endTime
-
  ");
         $sumQuery->setParameter("subscriber", $subscriber);
         $sumQuery->setParameter("startTime", $startTime);
@@ -89,8 +123,6 @@ SELECT count(c) , sum(c.endTime-c.startTime)FROM ReportBundle:Connection c
             return $this->render('GenBundle:Default:index.html.twig', $parameters);
         }
         $html = $this->renderView('GenBundle:Default:index.html.twig', $parameters);
-
-
         return new Response(
             $this->get('knp_snappy.pdf')->getOutputFromHtml($html),
             200,

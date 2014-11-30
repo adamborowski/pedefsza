@@ -127,7 +127,8 @@ class AppKernel extends Kernel
             new Wsza\Bundle\ReportBundle\ReportBundle(),
             new Wsza\Bundle\GenBundle\GenBundle(),
             new Hackzilla\BarcodeBundle\HackzillaBarcodeBundle(),
-            new Knp\Bundle\SnappyBundle\KnpSnappyBundle()
+            new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
+            new Lsw\ApiCallerBundle\LswApiCallerBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
@@ -145,6 +146,6 @@ class AppKernel extends Kernel
      */
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
-        $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
+        $loader->load(__DIR__ . '/config/config_' . $this->getEnvironment() . '.yml');
     }
 }

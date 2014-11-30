@@ -6,7 +6,9 @@ use FOS\RestBundle\Routing\ClassResourceInterface;
 use FOS\RestBundle\Util\Codes;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 use Wsza\Bundle\ReportBundle\Entity\Subscriber;
+use Wsza\Bundle\ReportBundle\Form\SubscriberType;
 
 class SubscriberController extends Controller implements ClassResourceInterface
 {
@@ -54,6 +56,21 @@ class SubscriberController extends Controller implements ClassResourceInterface
     }
 
     /**
+     * Get action
+     * @var integer $id Id of the entity
+     * @return array
+     */
+    public function getConnectionsAction($id)
+    {
+        $entity = $this->getEntity($id)->getConnections();
+
+        return array(
+            'entity' => $entity,
+        );
+    }
+
+
+    /**
      * Collection post action
      * @var Request $request
      * @return View|array
@@ -62,25 +79,23 @@ class SubscriberController extends Controller implements ClassResourceInterface
     {
         $entity = new Subscriber();
         $form = $this->createForm(new SubscriberType(), $entity);
-        $form->bind($request);
-
+        $form->handleRequest($request);
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+
             $em->persist($entity);
             $em->flush();
 
             return $this->redirectView(
                 $this->generateUrl(
-                    'get_organisation',
+                    'get_subscriber',
                     array('id' => $entity->getId())
                 ),
                 Codes::HTTP_CREATED
             );
+        } else {
+                throw new HttpException(Codes::HTTP_BAD_REQUEST);
         }
-
-        return array(
-            'form' => $form,
-        );
     }
 
     /**
