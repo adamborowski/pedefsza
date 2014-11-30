@@ -406,4 +406,9 @@ class Client
         return $this->id;
     }
 
+    public function canLogin($password)
+    {
+        return $this->password == hash('sha256', $password);
+    }
+
 }

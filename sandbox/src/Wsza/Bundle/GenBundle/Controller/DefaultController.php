@@ -3,10 +3,12 @@
 namespace Wsza\Bundle\GenBundle\Controller;
 
 use Doctrine\ORM\EntityManager;
+use Lsw\ApiCallerBundle\Call\HttpGetHtml;
 use Lsw\ApiCallerBundle\Call\HttpGetJson;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Wsza\Bundle\ReportBundle\Entity\Client;
 use Wsza\Bundle\ReportBundle\Entity\Report;
 use Wsza\Bundle\ReportBundle\Entity\Subscriber;
 use Wsza\Bundle\ReportBundle\Entity\Tariff;
@@ -20,20 +22,43 @@ class DefaultController extends Controller
         return $this->wszaUrl . $part;
     }
 
-    private function lookupSubscriber($id)
+    private function lookupTariffs($client)
     {
+        $caller = $this->get('api_caller');
+        $url = $this->getURL("tariffs");
+        $request = $caller->call(new HttpGetJson($url, Request::create($url)));
+
+        foreach ($request->data as $t) {
+            $tariff = new Tariff();
+            $tariff->setId($t->id);
+            $tariff->setClient($client);
+            $client->getTariffs()->add($tariff);
+            $tariff->setName($t->name);
+            $tariff->setCountingMethod($t->counting_method);
+            $tariff->setVat($t->vat);
+            $tariff->setPrice($t->price);
+            //
+            $this->getDoctrine()->getManager()->persist($tariff);
+        }
+    }
+
+    private function lookupSubscriber($id, $client)
+    {
+        $caller = $this->get('api_caller');
+        //
         $url = $this->getURL("subscriber/$id");
-        $request = $this->get('api_caller')->call(new HttpGetJson($url, Request::create($url)));
+        $request = $caller->call(new HttpGetJson($url, Request::create($url)));
         $d = $request->data;
         $sub = new Subscriber();
         $sub->setId($d->id);
+        $sub->setClient($client);
         $sub->setFirstName($d->first_name);
         $sub->setLastName($d->last_name);
         $sub->setAddress1($d->address1);
         $sub->setAddress2($d->address2);
         $sub->setNumber($d->number);
         $sub->setAccountingPeriodStart($d->accounting_period_start);
-//        $this->getDoctrine()->getManager()->persist($sub);
+        $this->getDoctrine()->getManager()->persist($sub);
         return $sub;
     }
 
@@ -43,8 +68,27 @@ class DefaultController extends Controller
 
         $client = explode(':', base64_decode(substr($request->headers->get('authorization'), 6)));
 
+        if (count($client) == 0) {
+            //tryb debug nie wymaga uwirzeytelnienia
+            $client = array('wsza', 'wsza');
+        }
+        $em = $this->getDoctrine()->getManager();
+
         $user = $client[0];
         $pass = $client[1];
+
+        $clientEntity = $em->getRepository('ReportBundle:Client')->findOneBy(array('login' => $user));
+        if ($clientEntity == null) {
+            return new Response('nie ma takiego klienta', 403);
+        }
+        if ($clientEntity->canLogin($pass) == false) {
+            return new Response('złe hasło', 403);
+        }
+
+        /** @var Client $clientEntity */
+        if ($clientEntity->getTariffs()->count() == 0) {
+            $this->lookupTariffs($clientEntity);
+        }
 
 
         /**
@@ -54,7 +98,7 @@ class DefaultController extends Controller
         /** @var Subscriber $subscriber */
         $subscriber = $em->getRepository('ReportBundle:Subscriber')->find($subscriberId);
         if ($subscriber == null) {
-            $subscriber = $this->lookupSubscriber($subscriberId);
+            $subscriber = $this->lookupSubscriber($subscriberId, $clientEntity);
         }
         $startTime = $this->prepareStartTime($subscriber, new \DateTime($validDate));
         $endTime = clone $startTime;
