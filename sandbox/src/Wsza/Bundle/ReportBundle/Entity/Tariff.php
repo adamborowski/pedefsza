@@ -1,9 +1,9 @@
 <?php
 namespace Wsza\Bundle\ReportBundle\Entity;
 
-use JMS\Serializer\Annotation as JMS;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation as JMS;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
@@ -17,6 +17,26 @@ class Tariff
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
+
+    /** @ORM\Column(type="integer", nullable = true) * */
+    protected $idOnClient;
+
+    /**
+     * @return mixed
+     */
+    public function getIdOnClient()
+    {
+        return $this->idOnClient;
+    }
+
+    /**
+     * @param mixed $idOnClient
+     */
+    public function setIdOnClient($idOnClient)
+    {
+        $this->idOnClient = $idOnClient;
+    }
+
     /**
      * @ORM\Column(type="string", length=100)
      */
@@ -47,6 +67,7 @@ class Tariff
     {
         $this->vat = $vat;
     }
+
     /**
      * @ORM\Column(type="decimal", precision=2, scale=2)
      * vat
@@ -66,14 +87,6 @@ class Tariff
     function __construct()
     {
         $this->connections = new ArrayCollection();
-    }
-
-    /**
-     * @param mixed $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
     }
 
     /**

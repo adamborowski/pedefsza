@@ -28,6 +28,7 @@ class TariffAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
+            ->add('idOnClient')
             ->add('client.name')
             ->add('name')
             ->add('countingMethod')
@@ -38,6 +39,7 @@ class TariffAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
+            ->add('idOnClient')
             ->add('client.name')
             ->addIdentifier('name')
             ->add('countingMethod')

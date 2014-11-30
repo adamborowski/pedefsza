@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Wsza\Bundle\ReportBundle\Entity\Client;
+use Wsza\Bundle\ReportBundle\Entity\Connection;
 use Wsza\Bundle\ReportBundle\Entity\Report;
 use Wsza\Bundle\ReportBundle\Entity\Subscriber;
 use Wsza\Bundle\ReportBundle\Entity\Tariff;
@@ -30,7 +31,7 @@ class DefaultController extends Controller
 
         foreach ($request->data as $t) {
             $tariff = new Tariff();
-            $tariff->setId($t->id);
+            $tariff->setIdOnClient($t->id);
             $tariff->setClient($client);
             $client->getTariffs()->add($tariff);
             $tariff->setName($t->name);
@@ -40,6 +41,33 @@ class DefaultController extends Controller
             //
             $this->getDoctrine()->getManager()->persist($tariff);
         }
+        $this->getDoctrine()->getManager()->flush();
+    }
+
+    private function lookupConnections($subscriber, $client, \DateTime $start, \DateTime $end)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $caller = $this->get('api_caller');
+        $id = $client->getId();
+
+        //
+        $startTs = $start->format('U');
+        $endTs = $end->format('U');
+        //
+        $url = $this->getURL("subscriber/$id/connections/$startTs/$endTs");
+        $request = $caller->call(new HttpGetJson($url, Request::create($url)));
+        foreach ($request->data as $c) {
+            $con = new Connection();
+            $con->setStartTime(new \DateTime($c->start_time));
+            $con->setEndTime(new \DateTime($c->end_time));
+            $con->setTariff($em->getRepository('ReportBundle:Tariff')->findOneBy(array('idOnClient' => $c->tariff)));
+            $con->setNumber($c->number);
+            $con->setSubscriber($subscriber);
+            $con->setId($c->id);
+            $em->persist($con);
+        }
+        $em->flush();
+
     }
 
     private function lookupSubscriber($id, $client)
@@ -125,7 +153,13 @@ SELECT count(c) , sum(c.endTime-c.startTime) FROM ReportBundle:Connection c
         $sumVat = 0;
         foreach ($tariffs as $tariff) {
             $sumQuery->setParameter("tariff", $tariff);
+
             $ret = $sumQuery->getSingleResult();
+            if ($ret[1] == 0) {
+                //nie mamy żadnych połączeń, lepiej sprawdź w systemie wsza
+                $this->lookupConnections($subscriber, $clientEntity, $startTime, $endTime);
+                $ret = $sumQuery->getSingleResult();
+            }
             $costs = $tariff->countCosts($ret[1], $ret[2]);
             $costs['tariff'] = $tariff;
             $costs['vat'] = $tariff->getVat();
@@ -142,6 +176,7 @@ SELECT count(c) , sum(c.endTime-c.startTime) FROM ReportBundle:Connection c
         $report->setRequestTime(new \DateTime());
         $report->setReportTime($startTime);
         $em->persist($report);
+
 
 //        /** @var Barcode $barcode */
 //        $barcode = $this->container->get('hackzilla_barcode');

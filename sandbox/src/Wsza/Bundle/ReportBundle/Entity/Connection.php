@@ -13,6 +13,13 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Connection
 {
     /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+    /**
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue(strategy="AUTO")
