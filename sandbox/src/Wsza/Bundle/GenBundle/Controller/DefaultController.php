@@ -3,6 +3,7 @@
 namespace Wsza\Bundle\GenBundle\Controller;
 
 use Doctrine\ORM\EntityManager;
+use Lsw\ApiCallerBundle\Call\ApiCallInterface;
 use Lsw\ApiCallerBundle\Call\HttpGetHtml;
 use Lsw\ApiCallerBundle\Call\HttpGetJson;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -18,17 +19,26 @@ class DefaultController extends Controller
 {
     private $wszaUrl = ':8000/init/fvat/';
     private $reqHost;
+    private $token;
 
     private function getURL($part)
     {
         return 'http://' . $this->reqHost . $this->wszaUrl . $part;
     }
 
-    private function lookupTariffs($client)
+    private function curl($url)
     {
         $caller = $this->get('api_caller');
+        $request = Request::create($url);
+        $request->headers->set('X-Token', $this->token);
+        $response = $caller->call(new HttpGetJson($url, $request));
+        return $response;
+    }
+
+    private function lookupTariffs($client)
+    {
         $url = $this->getURL("tariffs");
-        $request = $caller->call(new HttpGetJson($url, Request::create($url)));
+        $request = $this->curl($url);
 
         foreach ($request->data as $t) {
             $tariff = new Tariff();
@@ -48,7 +58,6 @@ class DefaultController extends Controller
     private function lookupConnections($subscriber, $client, \DateTime $start, \DateTime $end)
     {
         $em = $this->getDoctrine()->getManager();
-        $caller = $this->get('api_caller');
         $id = $client->getId();
 
         //
@@ -56,7 +65,7 @@ class DefaultController extends Controller
         $endTs = $end->format('U');
         //
         $url = $this->getURL("subscriber/$id/connections/$startTs/$endTs");
-        $request = $caller->call(new HttpGetJson($url, Request::create($url)));
+        $request = $this->curl($url);
         foreach ($request->data as $c) {
             $con = new Connection();
             $con->setStartTime(new \DateTime($c->start_time));
@@ -73,10 +82,9 @@ class DefaultController extends Controller
 
     private function lookupSubscriber($id, $client)
     {
-        $caller = $this->get('api_caller');
         //
         $url = $this->getURL("subscriber/$id");
-        $request = $caller->call(new HttpGetJson($url, Request::create($url)));
+        $request = $this->curl($url);
         $d = $request->data;
         $sub = new Subscriber();
         $sub->setId($d->id);
@@ -97,6 +105,9 @@ class DefaultController extends Controller
         $this->reqHost = $request->getClientIp();
         $client = explode(':', base64_decode(substr($request->headers->get('authorization'), 6)));
 
+
+        $this->token = $request->headers->get('x-token');
+
         if (count($client) < 2 || $client == "") {
             //tryb debug nie wymaga uwirzeytelnienia
             $client = array('wsza', 'wsza');
@@ -108,10 +119,10 @@ class DefaultController extends Controller
 
         $clientEntity = $em->getRepository('ReportBundle:Client')->findOneBy(array('login' => $user));
         if ($clientEntity == null) {
-            return new Response('nie ma takiego klienta', 403);
+            return new Response('bad credentials', 403);
         }
         if ($clientEntity->canLogin($pass) == false) {
-            return new Response('złe hasło', 403);
+            return new Response('bad credentials', 403);
         }
 
         /** @var Client $clientEntity */
